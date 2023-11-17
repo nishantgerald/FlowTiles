@@ -1,0 +1,127 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: #e5e5e5;
+    background-color: black;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Two columns layout */
+    grid-template-rows: repeat(3, 1fr);
+    /* Three rows */
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dashboard>div {
+    background: #f6bf25;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#weather {
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
+    /* Ensure it spans from column line 2 to 4 */
+    display: flex;
+    /* Use flexbox to arrange child elements */
+    align-items: center;
+    /* Center children vertically */
+    justify-content: center;
+    /* Center children horizontally */
+    height: 100%;
+    /* Take full height of the grid cell */
+    border-radius: 10px;
+}
+
+#weather .weather-container {
+    display: flex;
+    align-items: center;
+    /* Align children vertically in the center */
+    justify-content: flex-start;
+    /* Align children horizontally to the start */
+}
+
+
+#weather .weather-info {
+    /* Container for the temperature and humidity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* Align text to the start */
+    width: 100%;
+    /* Adjust width as needed */
+    height: 100%;
+    /* Full height */
+    padding-left: 20px;
+    /* Add some padding between the icon and the text */
+}
+
+#weather .temperature {
+    font-size: 72px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #2c3e50;
+}
+
+#weather .humidity {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+
+#weather img {
+    width: 50%;
+    /* Adjust based on your layout requirements */
+    height: auto;
+    margin-right: 20px;
+}
+
+#calendar {
+    grid-row: 1 / 3;
+    grid-column: 2 / 4;
+}
+
+#calendar iframe {
+    display: block;
+    /* Remove extra space below the iframe */
+    border: none;
+    /* Assuming you don't want any border */
+    height: 100%;
+    /* Adjust the height to account for the h2 header, change 40px as needed */
+    width: 100%;
+    /* Use the full width */
+    border: solid 1px #000000;
+    border-radius: 10px;
+}
+
+#scores {
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+    overflow: hidden;
+}
+
+#scores .scorestream-widget-container {
+    border-radius: 10px;
+}
+
+#home-stamp {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+    height: 100%;
+    width: 100%;
+    /* Span across all columns */
+}
